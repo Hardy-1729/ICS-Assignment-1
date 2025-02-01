@@ -1,0 +1,19 @@
+import turtle
+t = turtle.Turtle()
+t.speed(1)
+turtle.Screen().bgcolor("white")
+t.color("red")
+
+
+
+for i in range(10):
+    t.forward(20)
+    t.circle(80)
+    t.left(36)
+t.penup()
+t.setposition (8,-(100))
+
+t.pendown()
+t.circle(130)
+t.hideturtle()
+turtle.mainloop()
