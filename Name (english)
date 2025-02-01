@@ -1,0 +1,132 @@
+import turtle
+t = turtle.Turtle()
+t.speed(5) # 1:slowest, 3:slow, 5:normal, 10:fast, 0:fastest
+L=50
+def move_turtle(x,y):
+  t.penup()
+  t.goto(x,y)
+  t.pendown()
+  
+def J(x,y):
+  move_turtle(x,y)
+  t.setheading(-90)
+  t.circle(L/2, 180)
+  t.forward(L)
+  t.left(90)
+  t.forward(L/2)
+  t.right(180)
+  t.forward(L)
+
+def Y(x,y):
+    move_turtle(x,y)
+    t.pendown()
+    t.setheading(90)
+    t.forward(3*L / 5)
+    t.right(45)
+    t.forward(3*L / 5)
+    t.backward(3*L / 5)
+    t.left(90)
+    t.forward(3*L/5)
+    
+def O(x,y):
+      move_turtle(x,y)
+      t.pendown()
+      t.circle(L/2)
+
+def T(x,y):
+  move_turtle(x,y)
+  t.setheading(90)
+  t.forward(L)
+  t.left(90)
+  t.forward(L/2)
+  t.right(180)
+  t.forward(L)
+  
+def I(x,y):
+    move_turtle(x,y)
+    t.pendown()
+    t.setheading(90)
+    t.forward(L)
+    t.right(90)
+    t.forward(2*L/5)
+    t.left( 180 )
+    t.forward( 4*L/5 )
+    t.left( 180 )
+    t.forward( 2*L/5)
+    t.setheading(-90)
+    t.forward(L)
+    t.setheading(180)
+    t.forward(2*L/5)
+    t.setheading(0)
+    t.forward(4*L/5)
+def R(x,y):
+    move_turtle(x,y)
+    t.pendown()
+    t.setheading(90)
+    t.forward(L)
+    t.setheading(0)
+    t.circle(-L/4, 180)
+    t.setheading(-45)
+    t.forward(L/2*1.41421356)
+    
+def A(x,y):
+    move_turtle(x,y)
+    t.pendown()
+    t.setheading(75)
+    t.forward(L)
+    t.right(150)
+    t.forward(L)
+    t.backward(L/2)
+    t.right(105)
+    t.forward(3*L/10)
+def D(x,y):
+    move_turtle(x,y)
+    t.pendown()
+    t.setheading(90)
+    t.forward(L)
+    t.right(90)
+    t.circle(-L/2,180)
+
+def V(x,y):
+  move_turtle(x,y)
+  t.setheading(125)
+  t.forward(L)
+  t.backward(L)
+  t.setheading(55)
+  t.forward(L)
+
+def H(x,y):
+    move_turtle(x,y)
+    t.pendown()
+    t.setheading(90)
+    t.forward(L)
+    t.right(180)
+    t.forward(L / 2)
+    t.left(90)
+    t.forward(L / 2)
+    t.left(90)
+    t.forward(L / 2)
+    t.setheading(-90)
+
+    t.forward(L)
+    
+    
+J(-250,100)
+Y(-150,100)
+O(-90,150)
+T(-50,100)
+I(-10,100)
+R(20,100)
+A(50,100)
+D(80,100)
+I(115,100)
+T(160,100)
+Y(200,100)
+A(220,100)
+
+J(-200,-1)
+A(-130,-1)
+D(-90,-1)
+H(-50,-1)
+A(-10,-1)
+V(40,-1)
