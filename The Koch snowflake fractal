@@ -1,4 +1,9 @@
 import turtle
+t = turtle.Turtle()
+t.speed(0) 
+t.penup()
+t.goto(-150, 90)  
+t.pendown()
 
 def koch_curve(t, order, size):
     if order == 0:
@@ -15,11 +20,7 @@ def draw_koch_snowflake(t, order, size):
 screen = turtle.Screen()
 screen.bgcolor("white")
 
-t = turtle.Turtle()
-t.speed(0) 
-t.penup()
-t.goto(-150, 90)  
-t.pendown()
+
 
    
 order = 5
