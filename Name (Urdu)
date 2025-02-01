@@ -1,0 +1,219 @@
+import turtle
+t = turtle.Turtle()
+t.speed(0) # 1:slowest, 3:slow, 5:normal, 10:fast, 0:fastest
+L = 10
+
+t.speed(0)
+t.penup()
+t.setpos(200, 0)
+t.pendown()
+x = 0
+
+def sq(a):
+    t.pendown()
+
+    t.begin_fill()
+
+    for _ in range(4):
+
+        t.forward(a)
+
+        t.right(90)
+    t.end_fill()
+    
+def wav():
+  t.pendown()
+  t.setheading(180)
+  for _ in range(4):
+
+      t.forward(L)
+
+      t.right(90)
+  t.setheading(-90)
+  t.forward(3*L/2)
+  t.setheading(180)
+  t.forward(L)
+  t.setheading(180)
+  
+def joined_h():
+  t.pendown()
+  
+  t.setheading(180)
+  t.forward(2*L)
+  t.left(135)
+  t.forward(L*1.4)
+  t.right(135)
+  t.forward(2*L)
+  
+def unjoined_j():
+  global x
+  t.setheading(90)
+  t.forward(L)
+  t.right(90)
+  t.forward(3*L)
+  t.setheading(90)
+  t.circle(3*L, -90)
+  x = t.pos()
+  t.penup()
+  t.forward(3*L/2)
+  t.right(90)
+  t.forward(L)
+  sq(L/2)
+  t.penup()
+  t.setpos(x)
+  t.setheading(180)
+  t.pendown()
+  
+  
+def joined_alif():
+  t.setheading(90)
+  t.circle(3*L/2, -180)
+  t.setheading(90)
+  t.forward(3*L)
+  
+def joined():
+  global x
+  t.setheading(90)
+  t.forward(L)
+  t.backward(L)
+  t.setheading(180)
+  t.forward(3*L/2)
+  t.setheading(90)
+  t.forward(L)
+  t.backward(L)
+  t.setheading(180)
+  t.forward(L)
+  x = t.pos()
+
+def joined_taa():
+  global x
+  joined()
+  t.penup()
+  t.backward(4*L/3)
+  t.right(90)
+  t.forward(2*L)
+  sq(L/2)
+  t.penup()
+  t.setheading(0)
+  t.forward(3*L/4)
+  t.setheading(90)
+  sq(L/2)
+  t.penup()
+  t.setpos(x)
+  t.setheading(180)
+  
+def joined_yaa():
+  global x
+  joined()
+  t.penup()
+  t.backward(3*L/2)
+  t.left(90)
+  t.forward(L)
+  sq(L/2)
+  t.penup()
+  t.setheading(0)
+  t.forward(L/2)
+  sq(L/2)
+  t.penup()
+  t.setpos(x)
+  t.setheading(180)
+
+t.setheading(90)
+
+#Jyo
+unjoined_j()
+t.forward(2*L)
+joined_yaa()
+wav()
+
+#
+
+t.penup()
+t.setpos(x)
+t.setheading(90)
+t.forward(L)
+
+t.setheading(180)
+t.forward(3*L)
+
+#
+
+#tiraa
+t.pendown()
+joined_taa()
+t.backward(L)
+joined_yaa()
+t.pendown()
+t.backward(2*L)
+t.forward(2*L)
+t.setheading(-90)
+t.forward(2*L)
+t.setheading(180)
+t.forward(2*L)
+t.penup()
+t.backward(L)
+t.setheading(90)
+t.forward(L)
+t.pendown()
+t.forward(3*L)
+t.backward(2*L)
+t.penup()
+t.left(90)
+t.forward(4*L)
+###
+
+#ditya
+t.pendown()
+t.setheading(0) 
+t.forward(2*L)
+t.setheading(-90)
+t.forward(2*L)
+t.setheading(180) 
+t.forward(2*L)
+
+t.penup()
+t.forward(2*L)
+t.pendown()
+joined_taa()
+joined_yaa()
+t.backward(3*L)
+t.pendown()
+t.forward(2*L)
+t.setheading(90)
+t.forward(3*L)
+t.backward(2*L)
+
+###
+#jaa
+t.penup()
+t.left(90)
+t.forward(4*L)
+t.pendown()
+unjoined_j()
+t.setheading(0)
+t.circle(2*L, -90)
+t.setheading(90)
+t.forward(3*L)
+###
+
+t.penup()
+t.setheading(-90)
+t.forward(3*L)
+t.setheading(180)
+t.forward(3*L)
+
+#dav
+t.pendown()
+t.setheading(0) 
+t.forward(2*L)
+t.setheading(-90)
+t.forward(2*L)
+t.setheading(180) 
+t.forward(2*L)
+
+t.penup()
+t.forward(L)
+t.setheading(90)
+t.forward(L)
+
+wav()
